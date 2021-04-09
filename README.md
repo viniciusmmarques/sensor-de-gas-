@@ -6,7 +6,7 @@
 * Vinícius Moraes
 
 ## Projeto
- Definição do projeto
+ Protótipo virtual que consegue detectar vazamento de gás. 
  
 ## Componentes
 1.
