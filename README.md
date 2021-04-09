@@ -1,12 +1,12 @@
 # Sensor de Gás
 
 ## Alunos
-* Cezário Luís
+* Cezário Luiz
 * José Braga
 * Vinícius Moraes
 
 ## Projeto
- Protótipo virtual que consegue detectar vazamento de gás. 
+ Protótipo virtual que simula a detecção de vazamento de gás. 
  
 ## Componentes
 1.
