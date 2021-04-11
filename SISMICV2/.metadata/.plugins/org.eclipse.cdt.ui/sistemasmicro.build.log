@@ -1,0 +1,106 @@
+12:46:29 **** Incremental Build of configuration Release for project sistemasmicro ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -Os -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:38: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  103 |   HAL_UART_Transmit(&huart1, inicio, strlen(inicio), 2000);
+      |                                      ^~~~~~
+../Core/Src/main.c:103:38: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:22:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   21 | #include "main.h"
+  +++ |+#include <string.h>
+   22 | 
+../Core/Src/main.c:103:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  103 |   HAL_UART_Transmit(&huart1, inicio, strlen(inicio), 2000);
+      |                              ^~~~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:104:30: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  104 |   HAL_UART_Transmit(&huart1, data, strlen(data), 2000);
+      |                              ^~~~
+      |                              |
+      |                              char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:126:3: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
+  126 |   memset(Rx_data,0,100);
+      |   ^~~~~~
+../Core/Src/main.c:126:3: warning: incompatible implicit declaration of built-in function 'memset'
+../Core/Src/main.c:126:3: note: include '<string.h>' or provide a declaration of 'memset'
+../Core/Src/main.c:152:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  152 |         HAL_UART_Transmit(&huart1, comgas, strlen(comgas), 2000);
+      |                                    ^~~~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:154:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  154 |         HAL_UART_Transmit(&huart1, data, strlen(data), 2000);
+      |                                    ^~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:166:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  166 |         HAL_UART_Transmit(&huart1, semgas, strlen(semgas), 2000);
+      |                                    ^~~~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+../Core/Src/main.c:168:36: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  168 |         HAL_UART_Transmit(&huart1, data, strlen(data), 2000);
+      |                                    ^~~~
+      |                                    |
+      |                                    char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:337,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:30,
+                 from ../Core/Inc/main.h:31,
+                 from ../Core/Src/main.c:21:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:700:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  700 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "sistemasmicro.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\cezar\STM32CubeIDE\workspace_1.6.1\SISMICV2\sistemasmicro\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sistemasmicro.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sistemasmicro.elf
+ 
+arm-none-eabi-objdump -h -S  sistemasmicro.elf  > "sistemasmicro.list"
+arm-none-eabi-objcopy  -O binary  sistemasmicro.elf  "sistemasmicro.bin"
+arm-none-eabi-size   sistemasmicro.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5660	     20	   1684	   7364	   1cc4	sistemasmicro.elf
+Finished building: default.size.stdout
+ 
+Finished building: sistemasmicro.bin
+Finished building: sistemasmicro.list
+ 
+ 
+
+12:46:29 Build Finished. 0 errors, 10 warnings. (took 542ms)
+
